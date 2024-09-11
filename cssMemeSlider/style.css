@@ -1,6 +1,7 @@
 body{
     background-color: #25282A;
     color: #FFFFFF;
+    font-family: sans-serif;
 }
 
 .container{
@@ -11,6 +12,7 @@ body{
 }
 
 .slides{
+    margin-bottom: 30px;
     display: grid;
     grid-template-columns: repeat(5, 100%);
     transition: transform 0.5s;
@@ -26,9 +28,27 @@ body{
     width: 100%;
 }
 
+.text-block{
+    width: 70%;
+    overflow: hidden;
+}
+
+.text-block__line{
+    display: grid;
+    grid-template-columns: repeat(5, 100%);
+    transition: transform 0.5s;
+
+}
+
 .controls {
     display: flex;
+    justify-content: flex-end;
+    max-width: 150px;
+    margin-left: auto;
     column-gap: 12px;
+
+    margin-top: -15px;
+    padding-bottom: 25px;
 }
 
 .control{
@@ -38,6 +58,26 @@ body{
     border: 2px #71ABFF solid;
     background-color: #71ABFF;
     cursor: pointer;
+}
+
+#ratio1:checked ~ .text-block .text-block__line {
+    transform: translateX(0%);
+}
+
+#ratio2:checked ~ .text-block .text-block__line {
+    transform: translateX(-100%);
+}
+
+#ratio3:checked ~ .text-block .text-block__line {
+    transform: translateX(-200%);
+}
+
+#ratio4:checked ~ .text-block .text-block__line {
+    transform: translateX(-300%);
+}
+
+#ratio5:checked ~ .text-block .text-block__line {
+    transform: translateX(-400%);
 }
 
 
@@ -79,4 +119,8 @@ body{
 
 #ratio5:checked ~ .controls .control5 {
     background-color: #25282A;
+}
+
+[type="radio"]{
+    display: none;
 }
