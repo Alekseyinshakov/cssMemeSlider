@@ -1,1 +1,1 @@
-git commit -m "feat: create and test style.css `LANG=en_EN date +'(%a, %b %d, %Y %r)'`"
+git commit -m "feat: add base layout `LANG=en_EN date +'(%a, %b %d, %Y %r)'`"
